@@ -4,6 +4,9 @@ public class WeightConverter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        final double POUNDS_TO_KILOS_RATE = 0.45359237;
+        final double KILOS_TO_POUNDS_RATE = 2.2046226218;
+
         String option;
         double amount;
 
@@ -25,12 +28,12 @@ public class WeightConverter {
         if (option.equals("1")) {
             System.out.print("Enter amount (pounds): ");
             amount = scanner.nextDouble();
-            System.out.printf("\n%.2f pounds is equal to %.2f kilograms", amount, amount * 0.45359237);
+            System.out.printf("\n%.2f pounds is equal to %.2f kilograms", amount, amount * POUNDS_TO_KILOS_RATE);
         }
         else if (option.equals("2")) {
             System.out.print("Enter amount (kilograms): ");
             amount = scanner.nextDouble();
-            System.out.printf("\n%.2f kilograms is equal to %.2f pounds", amount, amount * 2.2046226218);
+            System.out.printf("\n%.2f kilograms is equal to %.2f pounds", amount, amount * KILOS_TO_POUNDS_RATE);
         }
         else {
             System.out.println("Invalid Input");
